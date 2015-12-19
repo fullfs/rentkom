@@ -1,0 +1,42 @@
+.b-form {
+    background: rgba(0,0,0,0.1);
+}
+    .b-form__row {
+        @include cf;
+        margin-bottom: 30px;
+    }
+
+        .b-form__cell {
+            float: left;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 30px;
+                background: rgba(255,0,0,0.1);
+            }
+
+            &._head {
+                width: 25%;
+                padding-right: 2%;
+            }
+
+            &._item-7n {
+                width: 75%;
+            }
+
+            &._item-6n {
+                width: 40%;
+                padding-right: 2%;
+            }
+
+            &._item-3n {
+                width: 20%;
+                padding-right: 2%;
+            }
+
+            &._item-1n {
+                width: 10%;
+
+            }
+        }

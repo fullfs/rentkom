@@ -1,0 +1,26 @@
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+body {
+    background-color: white;
+    font: 13px/20px "Ubuntu", Arial, sans-serif;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1008px;
+    position: relative;
+    width: 100%;
+}
