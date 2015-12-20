@@ -11,14 +11,84 @@ html
 
 
             .b-form 
-                .b-form__row
-                    .b-form__cell._head
-                    .b-form__cell._item-6n
-                .b-form__row
-                    .b-form__cell._head
-                    .b-form__cell._item-3n
-                    .b-form__cell._item-3n
-                    .b-form__cell._item-1n
-                .b-form__row
-                    .b-form__cell._head
-                    .b-form__cell._item-7n
+                form.b-form__form(action="/")
+                    .b-form__row
+                        .b-form__cell._head
+                            span.b-form__number 1
+                            span.b-form__name._required Вид заявки
+
+                        .b-form__cell._item-6n
+                            select.b-form__select._required
+                                option(value="1") Техническое обслуживание
+                    .b-form__row
+                        .b-form__cell._head
+                            span.b-form__number 2
+                            span.b-form__name._required Контактное лицо
+
+                        .b-form__cell._item-3n
+                            input.b-form__input._person._required(type="text" placeholder="ФИО")
+                        .b-form__cell._item-3n
+                            input.b-form__input._company._required(type="text" placeholder="Название компании")
+
+                    .b-form__row
+                        .b-form__cell._head
+                            span.b-form__number 3
+                            span.b-form__name._required Как с вами связаться?
+
+                        .b-form__cell._item-3n
+                            input.b-form__input._phone._required(type="text" placeholder="Телефон")
+                        .b-form__cell._item-3n
+                            input.b-form__input._email._required(type="text" placeholder="E-mail")
+                   
+                    .b-form__row._sticked
+                        .b-form__cell._head
+                            span.b-form__number 4
+                            span.b-form__name Какой технике требуется помощь?
+
+                        .b-form__cell._item-3n
+                            input.b-form__input._required(type="text" placeholder="Марка или модель")
+                            i.b-form__star-small
+                        .b-form__cell._item-3n
+                            input.b-form__input(type="text" placeholder="Год выпуска")
+                   
+                    .b-form__row._sticked
+                        .b-form__cell._item-3n
+                            input.b-form__input(type="text" placeholder="Модель или тип двигателя")
+                        .b-form__cell._item-3n
+                            input.b-form__input(type="text" placeholder="Наработка в моточасах")
+
+                    .b-form__row
+                        .b-form__cell._item-3n
+                            input.b-form__input(type="text" placeholder="Навесное оборудование")
+
+
+
+
+                    .b-form__row._sticked
+                        .b-form__cell._head
+                            span.b-form__number 5
+                            span.b-form__name По какому адресу приехать нашему специалисту?
+                        
+                        .b-form__cell._item-3n
+                            input.b-form__input._required(type="text" placeholder="Город")
+                            i.b-form__star-small
+                        .b-form__cell._item-3n
+                            input.b-form__input(type="text" placeholder="Улица")
+                        .b-form__cell._item-1n
+                            input.b-form__input(type="text" placeholder="Дом")
+
+                    .b-form__row
+                        .b-form__cell._item-7n
+                            textarea.b-form__textarea(placeholder="Ваши комментарии и уточнения по заявке")
+                    
+                    .b-form__row
+                        .b-form__cell._head
+                            span.b-form__notice
+                                i *
+                                small &nbsp;&nbsp;- Обязательные поля
+                        .b-form__cell._item-7n
+                            button.btn.btn-default(type="submit")
+                                | Отправить
+                           
+                            button.btn.btn-secondary(type="submit")
+                                | Отмена

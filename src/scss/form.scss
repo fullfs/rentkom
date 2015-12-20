@@ -1,42 +1,172 @@
 .b-form {
-    background: rgba(0,0,0,0.1);
+    // background: rgba(0,0,0,0.1);
 }
     .b-form__row {
         @include cf;
         margin-bottom: 30px;
+        padding-left: 26%;
+        position: relative;
+
+        &._sticked {
+            margin-bottom: 15px;
+        }
     }
 
         .b-form__cell {
             float: left;
 
-            &:before {
-                content: '';
-                display: block;
-                height: 30px;
-                background: rgba(255,0,0,0.1);
-            }
+            // &:before {
+            //     content: '';
+            //     display: block;
+            //     height: 30px;
+            //     background: rgba(255,0,0,0.1);
+            // }
 
             &._head {
-                width: 25%;
+                @include cf;
+                width: 26%;
                 padding-right: 2%;
+                padding-top: 5px;
+                position: absolute;
+                left: 0;
+                top: 0;
             }
 
             &._item-7n {
-                width: 75%;
+                width: 82.4%;
             }
 
             &._item-6n {
-                width: 40%;
+                width: 71%;
                 padding-right: 2%;
             }
 
             &._item-3n {
-                width: 20%;
-                padding-right: 2%;
+                width: 35.7%;
+                padding-right: 2.5%;
             }
 
             &._item-1n {
-                width: 10%;
+                width: 11%;
 
             }
         }
+
+            .b-form__number {
+                float: left;
+                border-radius: 100%;
+                background: #c2cbd2;
+                color: #fff;
+                font-size: 15px;
+                line-height: 24px;
+                font-weight: bold;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                margin-right: 12px;
+            }
+
+            .b-form__name {
+                color: #2f383d;
+                font-weight: bold;
+                font-size: 17px;
+                line-height: 21px;
+                margin-left: 36px;
+                display: block;
+
+                &._required {
+                    &:after {
+                        content: '*';
+                        margin-left: 4px;
+                        font-weight: normal;
+                        color: #ff0033;
+                    }
+                }
+            }
+
+            .b-form__star-small {
+                position: absolute;
+                margin: 7px 0 0 2px;
+
+                &:before {
+                    content: '*';
+                    color: #ff0033;
+                    vertical-align: top;
+                }
+            }
+
+
+
+
+            .b-form__select,
+            .b-form__input,
+            .b-form__textarea {
+                height: 34px;
+                border: 1px solid #d7dee3;
+                line-height: 16px;
+                width: 100%;
+                font-size: 14px;
+                padding: 6px 6px;
+                color: #2f383d;
+                @include no-appear;
+                border-radius: 2px;
+                outline: none;
+                transition: border-color 0.5s;
+
+                &._error {
+                    border-color: #E14212;
+                }
+            }
+
+            .b-form__select {
+                background: url('../img/icons/arrow.png') no-repeat 98% center;
+            }
+
+            .b-form__input {
+                padding: 6px 24px 6px 9px;
+
+                &._person {
+                    background: url('../img/icons/person.png') no-repeat 98% center;
+                }
+
+                &._company {
+                    background: url('../img/icons/company.png') no-repeat 97.4% center;
+                }
+
+                &._phone {
+                    background: url('../img/icons/phone.png') no-repeat 98% center;
+                }
+
+                &._email {
+                    background: url('../img/icons/email.png') no-repeat 98% center;
+                }
+            }
+
+            .b-form__textarea {
+                height: 65px;
+                padding: 8px 9px;
+            }
+
+
+            .b-form__notice {
+                i {
+                    font-size: 17px;
+                    color: #ff0033;
+                }
+
+                small {
+                    color: #999999;
+                }
+            }
+
+            .btn-secondary {
+                border-color: #c2cbd2;
+                background: #c2cbd2;
+                color: #fff;
+
+                &:hover {
+                    border-color: #b2bcc4;
+                    background: #b2bcc4;
+                    color: #fff;
+                }
+            }
