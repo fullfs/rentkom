@@ -1,0 +1,106 @@
+doctype html
+html 
+    head
+        include ./includes/head.jade
+
+    body
+        .page
+            h1 Заявка на АКБ
+            p Заполните заявку,  и наш менеджер свяжется с вами в ближайшее время
+
+
+
+            .b-form._akb
+                form.b-form__form(action="/")
+                    .b-form__row._sticked2
+                        .b-form__cell._head
+                            span.b-form__name._required Имя
+
+                        .b-form__cell._item-6n
+                            input.b-form__input._required._person(type="text" placeholder="Представьтесь")
+
+                    .b-form__row._sticked2
+                        .b-form__cell._head
+                            span.b-form__name._required Телефон
+
+                        .b-form__cell._item-6n
+                            input.b-form__input._required._phone(type="text" placeholder="Телефон")
+            
+                    .b-form__row._sticked2
+                        .b-form__cell._head
+                            span.b-form__name E-mail
+
+                        .b-form__cell._item-6n
+                            input.b-form__input._email(type="text" placeholder="E-mail")
+                    
+                    .b-form__row._sticked2
+                        .b-form__cell._head
+                            span.b-form__name._required Бренд техники
+
+                        .b-form__cell._item-6n
+                            select.b-form__select._required
+                                option(value="") Выберите бренд
+                                option(value="1") Какой-то бренд
+                            
+                    .b-form__row._sticked0
+                        .b-form__cell._head
+                            span.b-form__name Фото короба
+
+                        .b-form__cell._item-6n
+                            label.b-form__field-file-label
+                                span.btn.btn-secondary(type="button")
+                                    | Загрузить файл
+                                input.b-form__field-file(type="file")
+                            
+                    .b-form__row._sticked2
+                        .b-form__cell._head
+                            span.b-form__name._required Размер короба
+
+                        .b-form__cell._item-3n
+                            span.b-form__item-scheme
+                            | &nbsp;
+                            
+                        .b-form__cell._item-3n
+                            input.b-form__input._required(type="text" placeholder="h")
+                    
+                    .b-form__row._sticked2
+                        .b-form__cell._item-3n
+                            | &nbsp;
+                        .b-form__cell._item-3n
+                            input.b-form__input._required(type="text" placeholder="S")
+                            
+                    .b-form__row
+                        .b-form__cell._item-3n
+                            | &nbsp;
+                        .b-form__cell._item-3n
+                            input.b-form__input._required(type="text" placeholder="L")
+                            
+                    .b-form__row._sticked2
+                        .b-form__cell._head
+                            span.b-form__name._required Вольтаж АКБ
+
+                        .b-form__cell._item-4n
+                            input.b-form__input._required(type="text" placeholder="")
+                        .b-form__cell._item-3n
+                            span.b-form__cell-text._indent В
+
+                    .b-form__row._sticked2
+                        .b-form__cell._head
+                            span.b-form__name._required Емкость АКБ
+
+                        .b-form__cell._item-4n
+                            input.b-form__input._required(type="text" placeholder="")
+                        .b-form__cell._item-3n
+                            span.b-form__cell-text._indent А/ч
+                            
+                    .b-form__row
+                        .b-form__cell._head
+                            span.b-form__notice
+                                i *
+                                small &nbsp;&nbsp;- Обязательные поля
+                        .b-form__cell._item-7n
+                            button.btn.btn-default(type="submit")
+                                | Отправить
+                           
+                            button.btn.btn-secondary(type="submit")
+                                | Отмена

@@ -25,3 +25,13 @@
 	    color: #ec1b42;
 	}
 }
+
+@mixin font {
+    font-family: "Ubuntu", Arial, sans-serif;
+}
+
+
+@mixin typo-s {
+    font-size: 14px;
+    line-height: 18px;
+}

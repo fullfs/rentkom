@@ -32,7 +32,7 @@
 	color: $color;
 	text-decoration: none;
 	border-bottom: 1px solid $color;
-	
+
 	&:hover {
 		border-color: transparent;
 	}
@@ -46,11 +46,4 @@
 		vertical-align: middle;
 		height: 100%;
 	}
-}
-
-
-@mixin font($size, $height, $family) {
-	font-family: 'GothamPro' + $family;
-	font-size: $size + px;
-	line-height: $height + px;
 }

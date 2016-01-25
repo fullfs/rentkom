@@ -1,5 +1,6 @@
 .b-form {
     // background: rgba(0,0,0,0.1);
+    @include font;
 }
     .b-form__row {
         @include cf;
@@ -10,10 +11,19 @@
         &._sticked {
             margin-bottom: 15px;
         }
+
+        &._sticked0 {
+            margin-bottom: 0px;
+        }
+
+        &._sticked2 {
+            margin-bottom: 20px;
+        }
     }
 
         .b-form__cell {
             float: left;
+            position: relative;
 
             // &:before {
             //     content: '';
@@ -71,8 +81,11 @@
                 font-weight: bold;
                 font-size: 17px;
                 line-height: 21px;
-                margin-left: 36px;
                 display: block;
+
+                .b-form__number + & {
+                    margin-left: 36px;
+                }
 
                 &._required {
                     &:after {
@@ -95,12 +108,19 @@
                 }
             }
 
+            .b-form__cell-text {
+                line-height: 32px;
 
+                &._indent {
+                    margin-left: 8px;
+                }
+            }
 
 
             .b-form__select,
             .b-form__input,
             .b-form__textarea {
+                @include font;
                 height: 34px;
                 border: 1px solid #d7dee3;
                 line-height: 16px;
@@ -120,6 +140,14 @@
 
             .b-form__select {
                 background: url('../img/icons/arrow.png') no-repeat 98% center;
+
+                &._empty {
+                    color: #999;
+                }
+
+                option {
+                    color: #333333;
+                }
             }
 
             .b-form__input {
@@ -147,6 +175,26 @@
                 padding: 8px 9px;
             }
 
+
+            .b-form__field-file-label {
+                position: relative;
+                overflow: hidden;
+            }
+
+                .b-form__field-file {
+                    position: absolute;
+                    top: 0;
+                    visibility: hidden;
+                    left: -9999px;
+                }
+
+            .b-form__item-scheme {
+                position: absolute;
+                background: url('../img/item-scheme.png');
+                width: 192px;
+                height: 112px;
+                top: 28px;
+            }
 
             .b-form__notice {
                 i {
